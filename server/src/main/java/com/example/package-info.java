@@ -1,4 +1,4 @@
 /**
- * Teste mudando algo
+ * Teste mudando algo.
  */
 package com.example;

@@ -40,4 +40,3 @@ pipeline {
 
     }
 }
-© 2018 GitHub, Inc.

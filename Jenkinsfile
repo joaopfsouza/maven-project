@@ -5,7 +5,7 @@ pipeline {
          string(name: 'tomcat_dev', defaultValue: '54.91.116.148', description: 'Staging Server')
          string(name: 'tomcat_prod', defaultValue: '34.209.233.6', description: 'Production Server')
          string(name: 'myKey', defaultValue: 'C:/git/tomcat-demo.ppk', description: 'Staging Server SSH Key')
-        string(name: 'path', defaultValue: 'C:/Program Files (x86)/Jenkins/workspace/FullyAutomated/webapp/target/webapp.war', description: 'Path war')
+        string(name: 'pathWar', defaultValue: 'C:/Program Files (x86)/Jenkins/workspace/FullyAutomated/webapp/target/webapp.war', description: 'Path war')
     }
 
     triggers {
@@ -29,7 +29,7 @@ stages{
             parallel{
                 stage ('Deploy to Staging'){
                     steps {
-                        bat "pscp -i ${params.myKey} ${params.path} ec2-user@${params.tomcat_dev}:/var/lib/tomcat7/webapps"
+                        bat "pscp -i ${params.myKey} ${params.pathWar} ec2-user@${params.tomcat_dev}:/var/lib/tomcat7/webapps"
                     }
                 }
 

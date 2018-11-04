@@ -5,6 +5,7 @@ pipeline {
          string(name: 'tomcat_dev', defaultValue: '54.91.116.148', description: 'Staging Server')
          string(name: 'tomcat_prod', defaultValue: '34.209.233.6', description: 'Production Server')
          string(name: 'myKey', defaultValue: 'C:/git/tomcat-demo.ppk', description: 'Staging Server SSH Key')
+        string(name: 'path', defaultValue: 'C:/Program Files (x86)/Jenkins/workspace/FullyAutomated/webapp/target/webapp.war', description: 'Path war')
     }
 
     triggers {

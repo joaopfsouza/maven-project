@@ -2,14 +2,9 @@ pipeline {
     agent any
     stages{
         stage('Build'){
-            step{
+            steps{
                 bat 'mvn clear package'
             }
         }
-
     }
-
-
-
-
 }

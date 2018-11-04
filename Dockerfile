@@ -1,6 +1,6 @@
 FROM tomcat:8.0
 
-ADD ./webapp/target/*.war /user/local/tomcat/webapps/
+ADD ./webapp/target/webapp.war /user/local/tomcat/webapps/
 
 EXPOSE 8080
 
